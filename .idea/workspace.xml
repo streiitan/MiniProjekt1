@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5efa4b0-a480-40fe-8bfa-aec9f548759a" name="Changes" comment="Start commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ITime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IClock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ITime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ITime.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Krr3NSU4LzU97YCNjht5DxmoKi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674743343119</updated>
-      <workItem from="1674743344478" duration="741000" />
+      <workItem from="1674743344478" duration="1753000" />
     </task>
     <task id="LOCAL−00001" summary="Start commit">
       <created>1674743384813</created>
@@ -56,7 +59,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1674743384813</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Start commit">
+      <created>1674744125927</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1674744125927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
