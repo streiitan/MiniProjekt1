@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Clock chessClock = new Clock(0,2);
+        chessClock.startGame();
     }
 }

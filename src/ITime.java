@@ -1,5 +1,6 @@
 public interface ITime {
-    void stop();
-    void start();
+    void pause();
+    void resume();
     void reset();
+    void count();
 }

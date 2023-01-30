@@ -3,20 +3,21 @@ public class Clock implements IClock {
     private ITime t2;
     private boolean isT1Turn = true;
 
-    public Clock(int time) {
-        t1 = new Time(time);
-        t2 = new Time(time);
+    public Clock(int minutes, int seconds) {
+        t1 = new Time(minutes, seconds);
+        t2 = new Time(minutes, seconds);
     }
+
 
     @Override
     public void switchTurn() {
         if (isT1Turn) {
-            t1.stop();
-            t2.start();
+            t1.pause();
+            t2.resume();
             isT1Turn = false;
         } else {
-            t2.stop();
-            t1.start();
+            t2.pause();
+            t1.resume();
             isT1Turn = true;
         }
     }
@@ -29,12 +30,13 @@ public class Clock implements IClock {
 
     @Override
     public void freeze() {
-        t1.stop();
-        t2.stop();
+        t1.pause();
+        t2.pause();
     }
 
     @Override
     public void startGame() {
-        t1.start();
+        t1.resume();
+        System.out.println("Yo fuckers");
     }
 }
