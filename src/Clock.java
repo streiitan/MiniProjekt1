@@ -1,42 +1,33 @@
-public class Clock implements IClock {
-    private ITime t1;
-    private ITime t2;
-    private boolean isT1Turn = true;
+public class Clock implements ClockType{
+    private SettableCounterType minute, second;
 
-    public Clock(int minutes, int seconds) {
-        t1 = new Time(minutes, seconds);
-        t2 = new Time(minutes, seconds);
+    public Clock(int mm, int ss){
+        TimeType clock = new Time(mm,ss);
+        this.minute = new Counter();
+        this.second = new Counter(minute);
+        setTime(clock);
     }
-
-
     @Override
-    public void switchTurn() {
-        if (isT1Turn) {
-            t1.pause();
-            t2.resume();
-            isT1Turn = false;
-        } else {
-            t2.pause();
-            t1.resume();
-            isT1Turn = true;
-        }
+    public void tickTack() {
+        second.count();
+        //alarmManager.checkForAlarm(getTime());
     }
 
     @Override
-    public void reset() {
-        t1.reset();
-        t2.reset();
+    public void setTime(TimeType time) {
+        this.minute.setCount(time.getMinute());
+        this.second.setCount(time.getSecond());
     }
 
     @Override
-    public void freeze() {
-        t1.pause();
-        t2.pause();
+    public TimeType getTime() {
+        TimeType clockFace;
+        clockFace = new Time(minute.getCount(), second.getCount());
+        return clockFace;
     }
 
     @Override
-    public void startGame() {
-        t1.resume();
-        System.out.println("Yo fuckers");
+    public String toString() {
+        return getTime().toString();
     }
 }

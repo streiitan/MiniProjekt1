@@ -1,43 +1,41 @@
 import javax.swing.*;
 
-public class Time implements ITime{
-    private final int SECONDS_PER_MINUTE = 60;
-    private final int START_TIME;
-    private int minute;
-    private int second;
-    private int time;
-    private Timer timer;
+public class Time implements TimeType {
+    private int second, minute;
     public Time(int minute, int second) {
-        this.minute = minute;
-        this.second = second;
-        this.START_TIME = SECONDS_PER_MINUTE * minute + second;
-        this.time = this.START_TIME;
-        this.timer = new Timer(1000, e -> count());
+        setMinute(minute);
+        setSecond(second);
     }
 
     @Override
-    public void pause() {
-        timer.stop();
+    public int getSecond() {
+        return this.second;
     }
 
     @Override
-    public void resume() {
-        timer.start();
-        System.out.println("Så skönt att vara naken");
+    public void setSecond(int second) {
+        this.second = second%60;
     }
 
     @Override
-    public void reset() {
-        time = START_TIME;
+    public int getMinute() {
+        return this.minute;
     }
 
     @Override
-    public void count() {
-        System.out.println(time);
-        if (time > 0) {
-            time--;
-        } else {
-            System.out.println("Tiden är slut");
-        }
+    public void setMinute(int minute) {
+        this.minute = minute%60;
+    }
+    public String toString() {
+        char[] array;
+        array = new char[3];
+        array[0] = (char)('0' + minute/10);
+        array[1] = (char)('0' + minute%10);
+        array[2] = ':';
+        array[3]= (char)('0' + second/10);
+        array[4]= (char)('0' + second%10);
+
+        return new String(array);
     }
 }
+

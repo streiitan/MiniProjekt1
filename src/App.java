@@ -1,6 +1,8 @@
+import javax.swing.*;
+
 public class App {
     public static void main(String[] args) {
-        Clock chessClock = new Clock(0,2);
-        chessClock.startGame();
+        Controller controller = new Controller();
+        SwingUtilities.invokeLater(() -> new MainFrame(controller));
     }
 }
