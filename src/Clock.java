@@ -10,7 +10,12 @@ public class Clock implements ClockType{
     @Override
     public void tickTack() {
         second.count();
-        //alarmManager.checkForAlarm(getTime());
+    }
+
+    @Override
+    public void restart() {
+        second.resume();
+        minute.resume();
     }
 
     @Override

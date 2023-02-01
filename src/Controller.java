@@ -9,7 +9,7 @@ public class Controller extends Observable {
 
     private Boolean p1Turn;
     private String player;
-    private int min = 00;
+    private int min = 01;
     private int sec = 05;
 
     public Controller(){
@@ -43,7 +43,7 @@ public class Controller extends Observable {
 
     public void startGame(){
         this.timer.start();
-
+        this.clock.restart();
     }
     public void stopGame(){
         this.timer.stop();

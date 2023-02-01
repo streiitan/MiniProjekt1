@@ -4,9 +4,9 @@
     <list default="true" id="f5efa4b0-a480-40fe-8bfa-aec9f548759a" name="Changes" comment="gjort om fungerar nu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AbstractCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

@@ -1,7 +1,6 @@
 import javax.swing.*;
 
 public class AbstractCounter implements CounterType {
-
     protected CounterType nextCounter;
     protected int currentCount;
     protected final int MAX_NR_OF_COUNTS;
@@ -39,14 +38,14 @@ public class AbstractCounter implements CounterType {
 
     @Override
     public void count() {
-        System.out.println(isPaused);
         if (!isPaused) {
             currentCount--;
-            if (currentCount < 0) {
+            if (currentCount < 0 ) {
                 currentCount = MAX_NR_OF_COUNTS - 1;
-                if (nextCounter != null) {
+                if (nextCounter != null && nextCounter.getCount() != 0) {
                     nextCounter.count();
                 } else {
+                    currentCount = 0;
                     pause();
                     System.out.println(isPaused); 
                     JOptionPane.showMessageDialog(null, "Tiden är slut");
