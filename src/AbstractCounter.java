@@ -1,11 +1,11 @@
 import javax.swing.*;
 
-public abstract class AbstractCounter implements CounterType {
+public class AbstractCounter implements CounterType {
 
     protected CounterType nextCounter;
     protected int currentCount;
     protected final int MAX_NR_OF_COUNTS;
-    protected boolean isFinished;
+    protected boolean isPaused;
 
     public AbstractCounter(int maxNrOfCounts, CounterType nextCounter) {
         this.nextCounter = nextCounter;
@@ -29,33 +29,27 @@ public abstract class AbstractCounter implements CounterType {
 
     @Override
     public void pause() {
-        isFinished = true;
+        isPaused = true;
     }
 
     @Override
     public void resume() {
-        isFinished = false;
+        isPaused = false;
     }
 
     @Override
     public void count() {
-        if (!isFinished) {
+        System.out.println(isPaused);
+        if (!isPaused) {
             currentCount--;
             if (currentCount < 0) {
                 currentCount = MAX_NR_OF_COUNTS - 1;
                 if (nextCounter != null) {
-                    if (nextCounter.getCount() < 1) {
-                        isFinished = true;
-                        Thread t = new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                JOptionPane.showMessageDialog(null, "Tiden är slut");
-                            }
-                        });
-                        t.start();
-                    } else {
-                        nextCounter.count();
-                    }
+                    nextCounter.count();
+                } else {
+                    pause();
+                    System.out.println(isPaused); 
+                    JOptionPane.showMessageDialog(null, "Tiden är slut");
                 }
             }
         }

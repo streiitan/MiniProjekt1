@@ -43,6 +43,7 @@ public class Controller extends Observable {
 
     public void startGame(){
         this.timer.start();
+
     }
     public void stopGame(){
         this.timer.stop();
@@ -60,12 +61,12 @@ public class Controller extends Observable {
     }
 
     public void switchTurn(){
-        if(p1Turn){
+        if(this.p1Turn){
             stopGame();
-            p1Turn = false;
+            this.p1Turn = false;
         }else
             startGame();
-            p1Turn = true;
+            this.p1Turn = true;
     }
 
     public void setTurn(Boolean b){

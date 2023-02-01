@@ -72,7 +72,10 @@ public class MainFrame extends JFrame{
     }
 
     private void updateControllerStart() {
+        this.contP1.setTurn(false);
+        this.contP2.setTurn(true);
         this.contP1.startGame();
+        this.contP2.stopGame();
         this.clockP1.updateUI();
 
     }
