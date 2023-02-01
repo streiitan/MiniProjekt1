@@ -5,23 +5,23 @@ import javax.swing.Timer;
 
 public class Controller extends Observable {
     private ClockType clock;
-    private LocalDateTime localTime;
     private Timer timer;
 
+    private Boolean p1Turn;
     private String player;
+    private int min = 00;
+    private int sec = 05;
 
     public Controller(){
-        localTime = LocalDateTime.now();
-        clock = new Clock(localTime.getMinute(), localTime.getSecond());
+        clock = new Clock(min, sec);
         timer = new Timer(1000, e -> tickTack());
-        timer.start();
+
     }
     public Controller(String player){
         this.player = player;
-        localTime = LocalDateTime.now();
-        clock = new Clock(localTime.getMinute(), localTime.getSecond());
+        clock = new Clock(min, sec);
         timer = new Timer(1000, e -> tickTack());
-        timer.start();
+
     }
 
     private void tickTack() {
@@ -42,18 +42,34 @@ public class Controller extends Observable {
     }
 
     public void startGame(){
-
+        this.timer.start();
     }
     public void stopGame(){
+        this.timer.stop();
 
     }
     public void resetGame(){
+        this.stopGame();
+        changeTime(min, sec);
 
     }
 
     public void changeTime(int min, int sec) {
         TimeType time = new Time(min, sec);
         clock.setTime(time);
+    }
+
+    public void switchTurn(){
+        if(p1Turn){
+            stopGame();
+            p1Turn = false;
+        }else
+            startGame();
+            p1Turn = true;
+    }
+
+    public void setTurn(Boolean b){
+        this.p1Turn = b;
     }
 
 }

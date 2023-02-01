@@ -14,7 +14,9 @@ public class ClockView extends JPanel implements Observer {
         this.controller = controller;
         setBackground(Color.WHITE);
         this.controller.addObserver(this);
+
     }
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -40,6 +42,9 @@ public class ClockView extends JPanel implements Observer {
 
     }
 
+    private void updateControllerSwitch() {
+        this.controller.switchTurn();
+    }
 
     @Override
     public void update(Observable o, Object arg) {

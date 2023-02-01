@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5efa4b0-a480-40fe-8bfa-aec9f548759a" name="Changes" comment="Start commit">
-      <change afterPath="$PROJECT_DIR$/src/AbstractCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClockView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CounterType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SettableCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SettableCounterType.java" afterDir="false" />
+    <list default="true" id="f5efa4b0-a480-40fe-8bfa-aec9f548759a" name="Changes" comment="gjort om fungerar nu men inte funktionerna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ITime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +58,7 @@
       <updated>1674743343119</updated>
       <workItem from="1674743344478" duration="1881000" />
       <workItem from="1675087375051" duration="2500000" />
-      <workItem from="1675156390258" duration="9993000" />
+      <workItem from="1675156390258" duration="21375000" />
     </task>
     <task id="LOCAL−00001" summary="Start commit">
       <created>1674743384813</created>
@@ -87,7 +78,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1674745594776</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="gjort om fungerar nu men inte funktionerna">
+      <created>1675181409869</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1675181409869</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start commit" />
+    <MESSAGE value="gjort om fungerar nu men inte funktionerna" />
+    <option name="LAST_COMMIT_MESSAGE" value="gjort om fungerar nu men inte funktionerna" />
   </component>
 </project>
